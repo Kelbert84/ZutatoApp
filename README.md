@@ -1,6 +1,3 @@
-# ZutatoApp
-App to Scan Recipes with iOS
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -88,7 +85,7 @@ App to Scan Recipes with iOS
 
     <h3>Collected Data</h3>
     <ul>
-      <li><strong>Recipes & Images:</strong> Stored locally or in iCloud only</li>
+      <li><strong>Recipes &amp; Images:</strong> Stored locally or in iCloud only</li>
       <li><strong>No login:</strong> No account is required</li>
       <li><strong>No tracking:</strong> No ads, no analytics</li>
     </ul>
