@@ -5,158 +5,213 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zutato – Rezeptscanner-App</title>
   <style>
+    :root{
+      --ink:#2c3e50;
+      --text:#333;
+      --muted:#666;
+      --bg:#f9f9f9;
+      --card:#ffffff;
+      --line:#e9e9e9;
+      --brand:#007AFF;
+      --warn:#fff5e6;
+      --warn-border:#ffd8a8;
+    }
+    *{box-sizing:border-box}
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 800px;
+      max-width: 860px;
       margin: 2rem auto;
       padding: 1rem;
-      background: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
+    h1, h2 { color: var(--ink); }
+    h1 { margin-bottom: .5rem; }
     h2 {
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid var(--line);
       padding-bottom: 0.3rem;
       margin-top: 2rem;
     }
+    h3 { margin-top: 1.25rem; color: var(--ink); }
+    p.lead { color: var(--muted); }
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+    }
+    .stack { display: grid; gap: .75rem; }
+    .grid { display: grid; gap: 1rem; }
+    ul { padding-left: 1.25rem; }
+
+    .appstore-badge { display:inline-block; margin-top: 1rem; }
+    .appstore-badge img { height: 50px; }
+
     .lang {
       margin-top: 3rem;
       padding-top: 2rem;
-      border-top: 2px solid #ddd;
+      border-top: 2px solid var(--line);
     }
-    a {
-      color: #007AFF;
-      text-decoration: none;
+
+    .notice {
+      background: var(--warn);
+      border: 1px solid var(--warn-border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .notice h3 {
+      display:flex; align-items:center; gap:.5rem;
+      margin:0 0 .5rem 0;
     }
-    .appstore-badge {
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    .appstore-badge img {
-      height: 50px;
+    .kicker {
+      display:inline-block; font-size:.9rem; color:var(--muted);
+      border:1px solid var(--line); padding:.15rem .5rem; border-radius:999px;
+      margin-left:.5rem;
     }
   </style>
 </head>
 <body>
 
-<h1>Zutato – Deine smarte Rezeptscanner-App</h1>
-
-<p>
-Mit <strong>Zutato</strong> kannst du handgeschriebene oder abfotografierte Rezepte scannen, digitalisieren und bequem verwalten.
-Kein Login, kein Tracking – alles bleibt auf deinem Gerät oder sicher in deiner iCloud.
-</p>
-
-<p><a href="https://apps.apple.com/us/app/zutato/id6749775876">📲 Jetzt im App Store ansehen</a></p>
-
-<a class="appstore-badge" href="https://apps.apple.com/us/app/zutato/id6749775876" target="_blank" rel="noopener">
-  <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1733875200" alt="Download on the App Store">
-</a>
-
-<h2>📲 Funktionen</h2>
-<ul>
-  <li>Rezepte scannen mit der Kamera (OCR-Texterkennung)</li>
-  <li>Rezepte manuell bearbeiten oder neu erfassen</li>
-  <li>Bewertung mit Sternen (1–5)</li>
-  <li>Kategorisieren & Filtern nach Kategorie oder Bewertung</li>
-  <li>Rezepte teilen als PDF (inkl. Bild, Zutaten, Zubereitung etc.)</li>
-  <li>Bild hinzufügen, PDF exportieren, Cloud-Speicherung</li>
-</ul>
-
-<h2>📄 Datenschutzerklärung (DE)</h2>
-<p><strong>Zutato</strong> speichert deine Daten ausschließlich auf deinem Gerät oder in deiner privaten iCloud (über Apple CloudKit).</p>
-
-<h3>Erhobene Daten</h3>
-<ul>
-  <li><strong>Rezepte & Bilder:</strong> Nur lokal oder in deiner iCloud</li>
-  <li><strong>Keine Anmeldung:</strong> Kein Benutzerkonto nötig</li>
-  <li><strong>Keine Werbung:</strong> Kein Tracking, keine Analytics</li>
-</ul>
-
-<h3>Deine Rechte</h3>
-<ul>
-  <li>Du kannst alle Daten jederzeit direkt in der App oder über iCloud löschen</li>
-</ul>
-
-<h2>🛠️ Support (DE)</h2>
-<p>
-📧 E-Mail: <a href="mailto:Jesters.crown@icloud.com">Jesters.crown@icloud.com</a><br/>
-🌐 Webseite: <a href="https://apps.apple.com/us/app/zutato/id6749775876">https://apps.apple.com/us/app/zutato/id6749775876</a>
-</p>
-  
-<h3>🚨 Bekannte Bugs (DE)</h3>
-<ul>
-  <li>Import via Share funktioniert nicht sauber. Wird mit Update 1.3 behoben.</li>
-
-<p>Bitte gib bei Support-Anfragen Folgendes an (falls möglich):</p>
-<ul>
-  <li>iPhone-Modell & iOS-Version</li>
-  <li>Ob iCloud aktiviert ist</li>
-  <li>Was genau nicht funktioniert</li>
-</ul>
-
-<div class="lang">
-  <h1>Zutato – Your smart recipe scanner app</h1>
-
-  <p>
-  With <strong>Zutato</strong>, you can easily scan, digitize and manage handwritten or photographed recipes.
-  No login, no tracking – everything stays on your device or securely in your iCloud.
+  <h1>Zutato – Deine smarte Rezeptscanner-App</h1>
+  <p class="lead">
+    Mit <strong>Zutato</strong> kannst du handgeschriebene oder abfotografierte Rezepte scannen, digitalisieren und bequem verwalten.
+    Kein Login, kein Tracking – alles bleibt auf deinem Gerät oder sicher in deiner iCloud.
   </p>
 
-  <p><a href="https://apps.apple.com/us/app/zutato/id6749775876">📲 View on the App Store</a></p>
+  <p><a href="https://apps.apple.com/us/app/zutato/id6749775876">📲 Jetzt im App Store ansehen</a></p>
 
   <a class="appstore-badge" href="https://apps.apple.com/us/app/zutato/id6749775876" target="_blank" rel="noopener">
-    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1733875200" alt="Download on the App Store">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/de-de?size=250x83&amp;releaseDate=1733875200" alt="Im App Store laden">
   </a>
 
-  <h2>📲 Features</h2>
-  <ul>
-    <li>Scan recipes via camera (OCR text recognition)</li>
-    <li>Edit or enter recipes manually</li>
-    <li>Rate recipes with 1–5 stars</li>
-    <li>Categorize & filter by rating or category</li>
-    <li>Share recipes as PDF (incl. image, ingredients, instructions, etc.)</li>
-    <li>Add photo, export PDF, iCloud storage</li>
-  </ul>
+  <h2>📲 Funktionen</h2>
+  <div class="card">
+    <ul class="stack">
+      <li>Rezepte scannen mit der Kamera (OCR-Texterkennung)</li>
+      <li>Rezepte manuell bearbeiten oder neu erfassen</li>
+      <li>Bewertung mit Sternen (1–5)</li>
+      <li>Kategorisieren &amp; Filtern nach Kategorie oder Bewertung</li>
+      <li>Rezepte als PDF teilen (inkl. Bild, Zutaten, Zubereitung etc.)</li>
+      <li>Bild hinzufügen, PDF-Export, iCloud-Speicherung</li>
+    </ul>
+  </div>
 
-  <h2>📄 Privacy Policy (EN)</h2>
-  <p><strong>Zutato</strong> stores your recipes, images, and categories only on your device or your private iCloud (via Apple CloudKit).</p>
+  <h2>📄 Datenschutzerklärung (DE)</h2>
+  <div class="card grid">
+    <p><strong>Zutato</strong> speichert deine Daten ausschließlich auf deinem Gerät oder in deiner privaten iCloud (über Apple CloudKit).</p>
 
-  <h3>Collected Data</h3>
-  <ul>
-    <li><strong>Recipes & Images:</strong> Stored locally or in iCloud only</li>
-    <li><strong>No login:</strong> No account required</li>
-    <li><strong>No tracking:</strong> No ads, no analytics</li>
-  </ul>
+    <div>
+      <h3>Erhobene Daten</h3>
+      <ul>
+        <li><strong>Rezepte &amp; Bilder:</strong> Nur lokal oder in deiner iCloud</li>
+        <li><strong>Keine Anmeldung:</strong> Kein Benutzerkonto nötig</li>
+        <li><strong>Keine Werbung:</strong> Kein Tracking, keine Analytics</li>
+      </ul>
+    </div>
 
-  <h3>Your Rights</h3>
-  <ul>
-    <li>You can delete all data at any time – directly in the app or through iCloud settings</li>
-  </ul>
+    <div>
+      <h3>Deine Rechte</h3>
+      <ul>
+        <li>Du kannst alle Daten jederzeit direkt in der App oder über iCloud löschen</li>
+      </ul>
+    </div>
+  </div>
 
-  <h2>🛠️ Support (EN)</h2>
-  <p>If you experience any issues with the app, feel free to contact me:</p>
-  <p>
-    📧 E-Mail: <a href="mailto:Jesters.crown@icloud.com">Jesters.crown@icloud.com</a><br/>
-    🌐 Website: <a href="https://apps.apple.com/us/app/zutato/id6749775876">https://apps.apple.com/us/app/zutato/id6749775876</a>
-  </p>
+  <h2>🛠️ Support (DE)</h2>
+  <div class="card">
+    <p>
+      📧 E-Mail: <a href="mailto:Jesters.crown@icloud.com">Jesters.crown@icloud.com</a><br/>
+      🌐 Webseite: <a href="https://apps.apple.com/us/app/zutato/id6749775876">https://apps.apple.com/us/app/zutato/id6749775876</a>
+    </p>
+    <div class="notice" role="note" aria-label="Bekannte Bugs">
+      <h3>🐞 Bekannte Bugs <span class="kicker">Stand: v1.2</span></h3>
+      <ul>
+        <li>Import via Share funktioniert nicht sauber. Wird mit Update <strong>1.3</strong> behoben.</li>
+      </ul>
+    </div>
+    <h3>So hilfst du beim Support</h3>
+    <ul>
+      <li>iPhone-Modell &amp; iOS-Version</li>
+      <li>Ob iCloud aktiviert ist</li>
+      <li>Kurze Fehlerbeschreibung (was genau passiert / nicht passiert)</li>
+    </ul>
+  </div>
 
-<h3>🚨 Known Bugs (EN)</h3>
-<ul>
-  <li>Import via Share does not work properly. Will be fixed in update 1.3.</li>
+  <div class="lang">
+    <h1>Zutato – Your smart recipe scanner app</h1>
+    <p class="lead">
+      With <strong>Zutato</strong>, you can easily scan, digitize, and manage handwritten or photographed recipes.
+      No login, no tracking — everything stays on your device or securely in your iCloud.
+    </p>
 
-  <p>When contacting me, please mention if possible:</p>
-  <ul>
-    <li>Your iPhone model and iOS version</li>
-    <li>If iCloud is enabled</li>
-    <li>What exactly isn’t working</li>
-  </ul>
-</div>
+    <p><a href="https://apps.apple.com/us/app/zutato/id6749775876">📲 View on the App Store</a></p>
+
+    <a class="appstore-badge" href="https://apps.apple.com/us/app/zutato/id6749775876" target="_blank" rel="noopener">
+      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1733875200" alt="Download on the App Store">
+    </a>
+
+    <h2>📲 Features</h2>
+    <div class="card">
+      <ul class="stack">
+        <li>Scan recipes via camera (OCR)</li>
+        <li>Edit or enter recipes manually</li>
+        <li>Rate recipes with 1–5 stars</li>
+        <li>Categorize &amp; filter by rating or category</li>
+        <li>Share recipes as PDF (incl. image, ingredients, instructions)</li>
+        <li>Add photo, export PDF, iCloud storage</li>
+      </ul>
+    </div>
+
+    <h2>📄 Privacy Policy (EN)</h2>
+    <div class="card grid">
+      <p><strong>Zutato</strong> stores your recipes and images only on your device or your private iCloud (via Apple CloudKit).</p>
+
+      <div>
+        <h3>Collected Data</h3>
+        <ul>
+          <li><strong>Recipes &amp; Images:</strong> Stored locally or in iCloud only</li>
+          <li><strong>No login:</strong> No account required</li>
+          <li><strong>No tracking:</strong> No ads, no analytics</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Your Rights</h3>
+        <ul>
+          <li>You can delete all data at any time — in the app or via iCloud settings</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>🛠️ Support (EN)</h2>
+    <div class="card">
+      <p>If you experience any issues with the app, feel free to contact me:</p>
+      <p>
+        📧 E-mail: <a href="mailto:Jesters.crown@icloud.com">Jesters.crown@icloud.com</a><br/>
+        🌐 Website: <a href="https://apps.apple.com/us/app/zutato/id6749775876">https://apps.apple.com/us/app/zutato/id6749775876</a>
+      </p>
+      <div class="notice" role="note" aria-label="Known Bugs">
+        <h3>🐞 Known Bugs <span class="kicker">as of v1.2</span></h3>
+        <ul>
+          <li>Import via Share does not work properly. Will be fixed in update <strong>1.3</strong>.</li>
+        </ul>
+      </div>
+      <h3>Helpful info when contacting</h3>
+      <ul>
+        <li>Your iPhone model &amp; iOS version</li>
+        <li>Whether iCloud is enabled</li>
+        <li>Short description of what exactly isn’t working</li>
+      </ul>
+    </div>
+  </div>
 
 </body>
 </html>
