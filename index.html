@@ -15,6 +15,9 @@
       --brand:#007AFF;
       --warn:#fff5e6;
       --warn-border:#ffd8a8;
+      --alert-bg:#ffe6db;
+      --alert-border:#ff7043;
+      --alert-text:#c63c1d;
     }
     *{box-sizing:border-box}
     body {
@@ -72,6 +75,23 @@
       display:flex; align-items:center; gap:.5rem;
       margin:0 0 .5rem 0;
     }
+    .alert {
+      background: var(--alert-bg);
+      border: 2px solid var(--alert-border);
+      border-radius: 12px;
+      padding: 0.9rem 1.1rem;
+      margin: 1rem 0;
+      color: var(--alert-text);
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .alert svg {
+      height: 20px;
+      width: auto;
+    }
     .kicker {
       display:inline-block; font-size:.9rem; color:var(--muted);
       border:1px solid var(--line); padding:.15rem .5rem; border-radius:999px;
@@ -111,6 +131,14 @@
   <!-- Deutsch -->
   <div id="lang-de">
     <h1>Zutato – Deine smarte Rezeptscanner-App</h1>
+    <div class="alert">
+      ❗️
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#3ddc84">
+        <path d="M256 32c-123.5 0-224 100.5-224 224s100.5 224 224 224 224-100.5 224-224S379.5 32 256 32zM160 352h-32V192h32v160zm112 0h-32V192h32v160zm112 0h-32V192h32v160z"/>
+      </svg>
+      An der Android-Version wird aktuell mit Hochdruck gearbeitet.
+    </div>
+
     <p class="lead">
       Mit <strong>Zutato</strong> kannst du handgeschriebene oder abfotografierte Rezepte scannen, digitalisieren und bequem verwalten.
       Kein Login, kein Tracking – alles bleibt auf deinem Gerät oder sicher in deiner iCloud.
@@ -161,6 +189,13 @@
         📧 E-Mail: <a href="mailto:Jesters.crown@icloud.com">Jesters.crown@icloud.com</a><br/>
         🌐 Webseite: <a href="https://apps.apple.com/us/app/zutato/id6749775876">https://apps.apple.com/us/app/zutato/id6749775876</a>
       </p>
+      <div class="alert">
+        ❗️
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#3ddc84">
+          <path d="M256 32c-123.5 0-224 100.5-224 224s100.5 224 224 224 224-100.5 224-224S379.5 32 256 32zM160 352h-32V192h32v160zm112 0h-32V192h32v160zm112 0h-32V192h32v160z"/>
+        </svg>
+        Android-Version in Arbeit – Release folgt bald.
+      </div>
       <div class="notice" role="note" aria-label="Bekannte Bugs">
         <h3>🐞 Bekannte Bugs <span class="kicker">Stand: v1.2</span></h3>
         <ul>
@@ -179,6 +214,14 @@
   <!-- English -->
   <div id="lang-en" style="display:none;">
     <h1>Zutato – Your smart recipe scanner app</h1>
+    <div class="alert">
+      ❗️
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#3ddc84">
+        <path d="M256 32c-123.5 0-224 100.5-224 224s100.5 224 224 224 224-100.5 224-224S379.5 32 256 32zM160 352h-32V192h32v160zm112 0h-32V192h32v160zm112 0h-32V192h32v160z"/>
+      </svg>
+      The Android version is currently in active development.
+    </div>
+
     <p class="lead">
       With <strong>Zutato</strong>, you can easily scan, digitize, and manage handwritten or photographed recipes.
       No login, no tracking — everything stays on your device or securely in your iCloud.
@@ -230,6 +273,13 @@
         📧 E-mail: <a href="mailto:Jesters.crown@icloud.com">Jesters.crown@icloud.com</a><br/>
         🌐 Website: <a href="https://apps.apple.com/us/app/zutato/id6749775876">https://apps.apple.com/us/app/zutato/id6749775876</a>
       </p>
+      <div class="alert">
+        ❗️
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#3ddc84">
+          <path d="M256 32c-123.5 0-224 100.5-224 224s100.5 224 224 224 224-100.5 224-224S379.5 32 256 32zM160 352h-32V192h32v160zm112 0h-32V192h32v160zm112 0h-32V192h32v160z"/>
+        </svg>
+        Android version in progress – coming soon.
+      </div>
       <div class="notice" role="note" aria-label="Known Bugs">
         <h3>🐞 Known Bugs <span class="kicker">as of v1.2</span></h3>
         <ul>
